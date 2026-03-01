@@ -100,7 +100,7 @@ function submitOrder() {
   let totalQty = fullQty + halfQty;
   let total = (fullQty * fullPrice) + (halfQty * halfPrice);
 
-  fetch("https://script.google.com/macros/s/AKfycbzm3dahRGrWiunzoEruMqIrMNhvJSOwnaFxRoGhCkVB-d2yO5y7XrLqBz11uqw0ndo/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwOjwSryL6vTWdp-mwKtudM672uivUwqOzd78Byp4euM7wQPQE2BTRsh7re7nCCgQ/exec", {
     method: "POST",
     body: JSON.stringify({
       product: "Egg",
