@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SK Online - Products & Services</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>SK Online</h1>
+    <p>Products & Services Order System</p>
+  </header>
+
+  <div class="container">
+    <h2>Place Your Order</h2>
+
+    <label for="date">Date</label>
+    <input type="date" id="date">
+
+    <label for="product">Select Item</label>
+    <select id="product" onchange="handleProductChange(); updatePriceAndTotal();">
+      <option value="">Select Product / Service</option>
+      <option value="Full Boiled Egg">Full Boiled Egg</option>
+      <option value="Half Boiled Egg">Half Boiled Egg</option>
+      <option value="Brown Bread">Brown Bread</option>
+      <option value="Jam">Jam</option>
+      <option value="Butter">Butter</option>
+      <option value="Services">Services</option>
+    </select>
+
+    <div id="serviceCommentBox" class="hidden">
+      <label for="comment">Additional Comment / Service Requirement</label>
+      <textarea id="comment" placeholder="Write your additional requirement here..."></textarea>
+    </div>
+
+    <label for="name">Customer Name</label>
+    <input type="text" id="name" placeholder="Enter customer name">
+
+    <label for="customerWhatsapp">Customer WhatsApp Number</label>
+    <input
+      type="text"
+      id="customerWhatsapp"
+      value="91"
+      maxlength="12"
+      placeholder="91xxxxxxxxxx"
+      oninput="handlePhoneInput()"
+    >
+
+    <label for="qty">Quantity</label>
+    <input type="number" id="qty" placeholder="Enter quantity" min="1" oninput="updatePriceAndTotal()">
+
+    <label for="price">Price</label>
+    <input type="number" id="price" readonly placeholder="Auto price">
+
+    <div class="result-box">
+      <h3>Total: ₹ <span id="total">0</span></h3>
+    </div>
+
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+
+  <div class="container">
+    <h2>Order Management</h2>
+
+    <input
+      type="text"
+      id="searchOrder"
+      placeholder="Search by name, item, phone, status..."
+      oninput="renderOrders()"
+    >
+
+    <div class="table-wrap">
+      <table id="orderTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Item</th>
+            <th>Name</th>
+            <th>Customer WhatsApp</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Comment</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="orderTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+  color: #222;
+}
+
+header {
+  background: #ff9800;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 25px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input[readonly] {
+  background: #f1f1f1;
+}
+
+button {
+  margin-top: 14px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e68900;
+}
+
+.result-box {
+  background: #fff8e1;
+  border: 1px solid #ffd54f;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table th {
+  background: #ffecb3;
+}
+
+.status-pending {
+  color: #c77700;
+  font-weight: bold;
+}
+
+.status-accepted {
+  color: green;
+  font-weight: bold;
+}
+
+.accepted-row {
+  background: #f0fff0;
+}
+
+.action-btn {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto;
+  margin: 3px;
+}
+
+.accept-btn {
+  background: green;
+}
+
+.accept-btn:hover {
+  background: #0b7a0b;
+}
+
+.edit-btn {
+  background: #1976d2;
+}
+
+.edit-btn:hover {
+  background: #125ea7;
+}
+
+.delete-btn {
+  background: red;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+.hidden {
+  display: none;
+}
